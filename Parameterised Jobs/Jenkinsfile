@@ -1,0 +1,8 @@
+properties([parameters([choice(choices: ['master', 'feature-1', 'feature-2'], description: 'Select branch to build', name: 'branch')])])
+
+node{
+    stage('SCM Checkout'){
+        echo "Pulling changes from the branch ${params.branch}"
+        git url: "https://github.com/Manash2712/myweb", branch: "${params.branch}"
+    }
+}
