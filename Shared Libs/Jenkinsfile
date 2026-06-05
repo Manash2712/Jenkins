@@ -1,0 +1,19 @@
+@Library('jenkins-shared-library-demo@main') _
+pipeline{
+    agent any
+    stages{
+        stage('Demo'){
+            steps{
+                welcome('Manash')
+            }
+        }
+        stage('Calculation'){
+            steps{
+                script{
+                    calculator.add(20,50)
+                    calculator.mulltiplication(25,25)
+                }
+            }
+        }
+    }
+}
