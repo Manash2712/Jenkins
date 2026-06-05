@@ -1,0 +1,4 @@
+node{
+    def name = "Manash"
+    echo "Welcome to jenkins pipeline - ${name}"
+}
